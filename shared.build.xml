@@ -1,0 +1,12 @@
+<project default="build-all">
+	<import file="./tenant/shared-file-list.xml" optional="true"/>
+	<import file="./regional/shared-file-list.xml" />
+	<import file="../../../builder.tools/build-script/build-core-multitenant.xml" />	
+	<target name="setup">
+		<property name="module" value="shared" />
+		<property name="srcdir" value="src/shared" />
+		<property name="skipClean" value="true" />
+	</target>
+	
+	<target name="build-all" depends="combine"/>
+</project>
